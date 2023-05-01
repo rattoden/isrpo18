@@ -214,7 +214,14 @@ namespace isrpo18
                     }
                 }
                 #endregion
-
+                
+                var paragraph1 = document.Paragraphs.Add();
+                var range1 = paragraph1.Range;
+                int a = first.Count() + second.Count() + third.Count();
+                range1.Text = "Итого: " + a + " сотрудника(-ов)";
+                paragraph1.set_Style("Заголовок 1");
+                range1.InsertParagraphAfter();
+                
                 app.Visible = true;
             }
         }
